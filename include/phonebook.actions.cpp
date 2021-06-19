@@ -36,20 +36,22 @@ namespace phonebook {
 		return storage;
 	}
 
-	void insertPhoneBookIndex(const string &path, PhoneBookTuple &tuple) {
+	void insertPhoneBookIndex(const string &path, const PhoneBookTuple &tuple) {
 		auto storage = syncDbSetup(path);
 		storage.insert(tuple);
 	}
 	
-	void getTupleFromPhone(const string &path, const string &phoneNumber) {
+	PhoneBookTupleResult getTupleFromPhone(const string &path, const string &phoneNumber) {
 		auto storage = syncDbSetup(path);
 		auto result = storage.get_all<PhoneBookTuple>(
 			where(
 				in(&PhoneBookTuple::phone, {phoneNumber})
 			)
 		);
-		for(auto i = result.begin(); i != result.end(); i++) {
-			std::cout << (*i);
+		if (result.size()) {
+			return {false, result[0]};
+		} else {
+			return {true};
 		}
 	}
 }
