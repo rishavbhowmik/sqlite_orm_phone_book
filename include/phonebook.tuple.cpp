@@ -41,7 +41,6 @@ namespace phonebook {
 		cout << "id: -\n";
 		{
 			cout << "name: ";
-			is.ignore(1, ' ');
 			getline(is, pbt.name, '\n');
 			is.clear();
 		}
@@ -49,6 +48,7 @@ namespace phonebook {
 		{
 			cout << "phone: ";
 			is >> pbt.phone;
+			is.ignore(1, ' ');
 		}
 		cout << endl;
 		return is;
