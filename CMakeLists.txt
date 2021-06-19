@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.19)
-project(sqlite_orm_phone_book)
-
-set(CMAKE_CXX_STANDARD 20)
-
-add_executable(sqlite_orm_phone_book main.cpp include/phonebook.hpp include/phonebook.cpp)
+project(sqlite_orm_1)
+set(CMAKE_CXX_STANDARD 14)
+file(GLOB files "*.cpp")
+file(GLOB files "*.hpp")
+foreach(file ${files})
+    get_filename_component(file_basename ${file} NAME_WE)
+    add_executable(${file_basename} ${file})
+    target_link_libraries(${file_basename}  sqlite3)
+endforeach()

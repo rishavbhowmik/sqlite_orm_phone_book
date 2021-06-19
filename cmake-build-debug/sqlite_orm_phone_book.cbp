@@ -80,10 +80,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/admin/Desktop/work/cpps/june/sqlite_orm_phone_book/include/phonebook.cpp">
+		<Unit filename="/Users/admin/Desktop/work/cpps/june/sqlite_orm_phone_book/include/phonebook.actions.cpp">
 			<Option target="sqlite_orm_phone_book"/>
 		</Unit>
-		<Unit filename="/Users/admin/Desktop/work/cpps/june/sqlite_orm_phone_book/include/phonebook.hpp">
+		<Unit filename="/Users/admin/Desktop/work/cpps/june/sqlite_orm_phone_book/include/phonebook.actions.hpp">
+			<Option target="sqlite_orm_phone_book"/>
+		</Unit>
+		<Unit filename="/Users/admin/Desktop/work/cpps/june/sqlite_orm_phone_book/include/phonebook.tuple.cpp">
+			<Option target="sqlite_orm_phone_book"/>
+		</Unit>
+		<Unit filename="/Users/admin/Desktop/work/cpps/june/sqlite_orm_phone_book/include/phonebook.tuple.hpp">
+			<Option target="sqlite_orm_phone_book"/>
+		</Unit>
+		<Unit filename="/Users/admin/Desktop/work/cpps/june/sqlite_orm_phone_book/include/sqlite_orm.hpp">
 			<Option target="sqlite_orm_phone_book"/>
 		</Unit>
 		<Unit filename="/Users/admin/Desktop/work/cpps/june/sqlite_orm_phone_book/main.cpp">

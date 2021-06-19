@@ -3,13 +3,19 @@
 //
 
 #include <iostream>
-#include "include/phonebook.hpp"
+#include "include/phonebook.tuple.hpp"
+#include "include/phonebook.actions.hpp"
 
 using std::cout;
 using std::endl;
 
 int main () {
-	PhoneBookTuple ris = newPhoneBookFromInput();
-	cout << "TupleExample " << ris << endl;
+	
+	phonebook::syncDbSetup();
+	
+	// unit tests
+	{
+		// testPhoneBookTuple();
+	}
 	return 0;
 }
